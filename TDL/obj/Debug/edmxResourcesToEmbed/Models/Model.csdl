@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Departement">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="todolists" Relationship="Self.FK_todolist_Departement" FromRole="Departement" ToRole="todolist" />
+  </EntityType>
+  <EntityType Name="todolist">
+    <Key>
+      <PropertyRef Name="tid" />
+    </Key>
+    <Property Name="tid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="id" Type="Int32" />
+    <NavigationProperty Name="Departement" Relationship="Self.FK_todolist_Departement" FromRole="todolist" ToRole="Departement" />
+  </EntityType>
+  <Association Name="FK_todolist_Departement">
+    <End Role="Departement" Type="Self.Departement" Multiplicity="0..1" />
+    <End Role="todolist" Type="Self.todolist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departement">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="todolist">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Departements" EntityType="Self.Departement" />
+    <EntitySet Name="todolists" EntityType="Self.todolist" />
+    <AssociationSet Name="FK_todolist_Departement" Association="Self.FK_todolist_Departement">
+      <End Role="Departement" EntitySet="Departements" />
+      <End Role="todolist" EntitySet="todolists" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
