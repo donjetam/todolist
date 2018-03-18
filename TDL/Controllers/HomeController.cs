@@ -75,5 +75,19 @@ namespace TDL.Controllers
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
+
+        public JsonResult DeleteNotes(int tid)
+        {
+            bool result = false;
+            todolist tdl = db.todolists.SingleOrDefault(x => x.IsDeleted == false && x.tid == tid);
+            if (tdl != null)
+            {
+                tdl.IsDeleted = true;
+                db.SaveChanges();
+                result = true;
+            }
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
     }
 }

@@ -56,6 +56,25 @@
             </div>
         </div>
     </div> 
+    @*Create A PopUp Modal For DeleteConfirmation*@
+
+    <div class="modal fade" id="DeleteConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                    <h4>Delete Notes</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>This Note Will Be Deleted Forever.</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-primary" data-dismiss="modal" id="r">CANCEL</a>
+                    <a href="#" class="btn btn-danger" onclick="ConfirmDelete()">CONFIRM</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -141,4 +160,21 @@
             }
         })
     })
+
+    //Show The Popup Modal For DeleteComfirmation
+    var DeleteNotes = function (tid) {
+        $("#ID").val(tid);
+        $("#DeleteConfirmation").modal("show");
+    }
+    var ConfirmDelete = function () {
+        var ID = $("#ID").val();
+        $.ajax({
+            type: "POST",
+            url: "/Home/DeleteNotes?tid=" + ID,
+            success: function (result) {
+                $("#DeleteConfirmation").modal("hide");
+                $(".row_" + ID).remove();
+            }
+        })
+    }
 </script>
