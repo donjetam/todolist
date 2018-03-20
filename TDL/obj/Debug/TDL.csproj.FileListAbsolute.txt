@@ -8,3 +8,4 @@ C:\Users\Muharrem\Documents\Visual Studio 2013\Projects\NEW\TDL\TDL\bin\Debug\TD
 C:\Users\Muharrem\Documents\Visual Studio 2013\Projects\NEW\TDL\TDL\obj\Debug\TDL.exe
 C:\Users\Muharrem\Documents\Visual Studio 2013\Projects\NEW\TDL\TDL\obj\Debug\TDL.pdb
 C:\Users\Muharrem\Documents\Visual Studio 2013\Projects\NEW\TDL\TDL\obj\Debug\TDL.Dashboard.resources
+C:\Users\Muharrem\documents\visual studio 2013\Projects\NEW\TDL\TDL\obj\Debug\TDL.VIew.resources

@@ -8,5 +8,7 @@ namespace TDL
 {
     interface Interface_Add
     {
+        void notification_success();
+        void notification_failed();
     }
 }

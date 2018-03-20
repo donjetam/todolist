@@ -24,5 +24,10 @@ namespace TDL
             c.login(tf_username.Text, tf_password.Text);
             this.Hide();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
