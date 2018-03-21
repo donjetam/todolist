@@ -127,7 +127,7 @@ namespace TDL
             this.Hide();
             VIew v = new VIew();
             v.Show();
-            Selectt();
+            v.Select();
         }
 
         private void btn_add_Click(object sender, EventArgs e)
