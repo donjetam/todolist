@@ -1,0 +1,10 @@
+
+*.cache
+*.config
+*.json
+*.sqlite
+*.lock
+*.ide
+*.cache
+*.cache
+*.cache
