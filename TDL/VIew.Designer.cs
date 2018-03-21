@@ -35,8 +35,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btn_add = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactList)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -78,9 +79,9 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.btn_add);
-            this.panel2.Location = new System.Drawing.Point(1, 3);
+            this.panel2.Location = new System.Drawing.Point(-12, -1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(852, 62);
+            this.panel2.Size = new System.Drawing.Size(865, 66);
             this.panel2.TabIndex = 22;
             // 
             // button3
@@ -94,6 +95,7 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -106,6 +108,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "UPDATE";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -119,6 +122,19 @@
             this.button1.Text = "VIEW";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkOrange;
+            this.button4.Font = new System.Drawing.Font("Proxima Nova Th", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(27, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(146, 59);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "DASHBOARD";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // btn_add
             // 
             this.btn_add.BackColor = System.Drawing.Color.DarkOrange;
@@ -131,28 +147,24 @@
             this.btn_add.Text = "ADD";
             this.btn_add.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // panel1
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkOrange;
-            this.button4.Font = new System.Drawing.Font("Proxima Nova Th", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(0, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 59);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "DASHBOARD";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Location = new System.Drawing.Point(-2, -4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(855, 481);
+            this.panel1.TabIndex = 43;
             // 
             // VIew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 462);
+            this.ClientSize = new System.Drawing.Size(809, 458);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtboxSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvContactList);
+            this.Controls.Add(this.panel1);
             this.Name = "VIew";
             this.Text = "VIew";
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactList)).EndInit();
@@ -173,5 +185,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel1;
     }
 }

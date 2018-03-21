@@ -17,6 +17,7 @@ namespace TDL
         public VIew()
         {
             InitializeComponent();
+            this.CenterToScreen();
            
         }
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
@@ -71,6 +72,21 @@ namespace TDL
         {
             this.Hide();
             Dashboard d = new Dashboard();
+            d.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Update u = new Update();
+            u.Show(); 
+            u.Selectt();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Delete d = new Delete();
+            this.Hide();
             d.Show();
         }
 

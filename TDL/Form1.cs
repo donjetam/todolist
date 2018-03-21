@@ -17,6 +17,7 @@ namespace TDL
         public Form1()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void btn_login_Click(object sender, EventArgs e)

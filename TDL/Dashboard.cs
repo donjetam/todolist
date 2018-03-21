@@ -17,6 +17,7 @@ namespace TDL
         public Dashboard()
         {
             InitializeComponent();
+            this.CenterToScreen();
         } 
         
         contactClass c = new contactClass();
@@ -25,6 +26,12 @@ namespace TDL
         
         private void btn_add_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(this.Title.Text) || string.IsNullOrWhiteSpace(this.Label.Text) || string.IsNullOrWhiteSpace(this.Description.Text))
+            {
+                MessageBox.Show("Please fill up the form!");
+            }
+            else { 
+            
             //Get the value from the input fields
             c.Title = Title.Text;
             c.Description = Description.Text;
@@ -46,7 +53,8 @@ namespace TDL
             //Load Data on Data Gridview
             //DataTable dt = c.Select();
            //dgvContactList.DataSource = dt;
-        }
+         }
+       }
 
         void Clear()
         {
@@ -62,6 +70,26 @@ namespace TDL
             vv.Show();
             vv.Select();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Update d = new Update();
+            d.Show(); 
+            d.Selectt();
+        }
+
+        private void Description_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Delete d = new Delete();
+            this.Hide();
+            d.Show();
         } 
     }
 }
