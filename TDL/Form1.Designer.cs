@@ -43,6 +43,7 @@
             this.tf_username.Name = "tf_username";
             this.tf_username.Size = new System.Drawing.Size(165, 20);
             this.tf_username.TabIndex = 0;
+            this.tf_username.Text = "Admin";
             // 
             // tf_password
             // 
@@ -50,6 +51,7 @@
             this.tf_password.Name = "tf_password";
             this.tf_password.Size = new System.Drawing.Size(165, 20);
             this.tf_password.TabIndex = 0;
+            this.tf_password.Text = "123";
             this.tf_password.UseSystemPasswordChar = true;
             // 
             // pictureBox1

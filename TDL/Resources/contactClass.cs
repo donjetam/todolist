@@ -13,6 +13,7 @@ namespace TDL.Resources
     {
         //Getter Setter Properties 
         //Acts as Data Carrier in Our Application
+        public int ID {get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string Label { get; set; } 
@@ -29,11 +30,12 @@ namespace TDL.Resources
             try
             {
                 //SQL to update data in our Database
-                string sql = "UPDATE tblAdd SET Title=@Title, Description=@Description, Label=@Label WHERE Title=@Title";
+                string sql = "UPDATE tblAdd SET Title=@Title, Description=@Description, Label=@Label WHERE ID=@ID";
 
                 //Creating SQL Command
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                //Create Parameters to add value
+                //Create Parameters to add value 
+                cmd.Parameters.AddWithValue("@ID", c.ID);
                 cmd.Parameters.AddWithValue("@Title", c.Title);
                 cmd.Parameters.AddWithValue("@Description", c.Description);
                 cmd.Parameters.AddWithValue("@Label", c.Label); 
@@ -101,6 +103,11 @@ namespace TDL.Resources
             return isSuccess;
         }
 
+
+        //internal DataTable Selectt()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
 
