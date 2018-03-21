@@ -20,7 +20,33 @@ namespace TDL.Resources
 
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
 
+        //SElecting Data from Database
+        public DataTable Select()
+        {
+            ///Step 1: Database Connection
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            DataTable dt = new DataTable();
+            try
+            {
+                //Step 2: Writing SQL Query
+                string sql = "SELECT * FROM tblAdd";
+                //Creating cmd using sql and conn
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                //Creating SQL DataAdapter using cmd
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                conn.Open();
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
 
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
         //Method to update data in database from our application
         public bool Update(contactClass c)
         {
@@ -73,11 +99,11 @@ namespace TDL.Resources
             try
             {
                 //SQL To Delte DAta
-                string sql = "DELETE FROM tblAdd WHERE Title=@Title";
+                string sql = "DELETE FROM tblAdd WHERE ID=@ID";
 
                 //Creating SQL Command
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@Title", c.Title);
+                cmd.Parameters.AddWithValue("@ID", c.ID);
                 //Open Connection
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
@@ -116,33 +142,7 @@ namespace TDL.Resources
 
 
 
-////SElecting Data from Database
-//public DataTable Select()
-//{
-//    ///Step 1: Database Connection
-//    SqlConnection conn = new SqlConnection(myconnstrng);
-//    DataTable dt = new DataTable();
-//    try
-//    {
-//        //Step 2: Writing SQL Query
-//        string sql = "SELECT * FROM tblAdd";
-//        //Creating cmd using sql and conn
-//        SqlCommand cmd = new SqlCommand(sql, conn);
-//        //Creating SQL DataAdapter using cmd
-//        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-//        conn.Open();
-//        adapter.Fill(dt);
-//    }
-//    catch (Exception ex)
-//    {
 
-//    }
-//    finally
-//    {
-//        conn.Close();
-//    }
-//    return dt;
-//}
 
 ////Inserting DAta into Database
 //public bool Insert(contactClass c)

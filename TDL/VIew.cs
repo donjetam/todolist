@@ -89,8 +89,6 @@ namespace TDL
             this.Hide();
             d.Show();
         }
-
-         
-         
+ 
     }
 }
