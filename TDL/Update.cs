@@ -78,7 +78,7 @@ namespace TDL
             if (success == true)
             {
                 //Updated Successfully
-                MessageBox.Show("Contact has been successfully Updated.");
+                MessageBox.Show("Note has been successfully Updated.");
                 //Load Data on Data Gridview
               //  DataTable dt = c.Selectt();
                // dgvContactList.DataSource = dt;
@@ -89,7 +89,7 @@ namespace TDL
             else
             {
                 //Failed to Update
-                MessageBox.Show("Failed to Update Contact.Try Again.");
+                MessageBox.Show("Failed to Update Note.Try Again.");
             }
             }
         }

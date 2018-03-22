@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace TDL
 {
-    public abstract class notesAbstract
+    class InsertNotes
     {
-        public void notify(string user) { 
-        }
-        public void prioritise(int id) { 
-        }
     }
 }
