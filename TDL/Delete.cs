@@ -11,17 +11,23 @@ using TDL.Resources;
 
 namespace TDL
 {
-    public partial class Delete : Form
+    public partial class Delete : Form, Switcher
     {
         Dashboard d = new Dashboard();
         VIew v = new VIew();
         Update up = new Update();
         contactClass c = new contactClass();
+        Buttons buttons = new Buttons();
+
         public Delete()
         {
             InitializeComponent();
             this.CenterToScreen();
             Load_Notes();
+            foreach (var button in Controls.OfType<Button>())
+            {
+                button.Click += button_Click;
+            }
         }
 
         private void Delete_Load(object sender, EventArgs e)
@@ -29,32 +35,11 @@ namespace TDL
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
-           
-            this.Hide();
-            d.Show();
+            buttons.SwitchTo(this, sender);
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            d.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            v.Show();
-            up.Select();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            up.Show();
-            up.Selectt();
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -99,11 +84,6 @@ namespace TDL
             //Load Data on Data Gridview
             DataTable dt = c.Select();
             dgvContactList.DataSource = dt;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

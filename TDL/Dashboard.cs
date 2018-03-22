@@ -12,7 +12,7 @@ using TDL.Resources;
 
 namespace TDL
 {
-    public partial class Dashboard : Form
+    public partial class Dashboard : Form, Switcher
     {
         public Dashboard()
         {
@@ -23,6 +23,7 @@ namespace TDL
         contactClass c = new contactClass();
         AddNotes ad = new AddNotes();
         VIew vv = new VIew();
+        Buttons buttons = new Buttons();
         
         private void btn_add_Click(object sender, EventArgs e)
         {
@@ -63,33 +64,14 @@ namespace TDL
             Label  .Text = String.Empty; 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button_Click(object sender, EventArgs e)
         {
-           
-            this.Hide();
-            vv.Show();
-            vv.Select();
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Update d = new Update();
-            d.Show(); 
-            d.Selectt();
+            buttons.SwitchTo(this, sender);
         }
 
         private void Description_TextChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Delete d = new Delete();
-            this.Hide();
-            d.Show();
-        } 
     }
 }

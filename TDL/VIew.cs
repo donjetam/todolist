@@ -12,8 +12,9 @@ using System.Windows.Forms;
 
 namespace TDL
 {
-    public partial class VIew : Form
+    public partial class VIew : Form, Switcher
     {
+        Buttons buttons = new Buttons();
         public VIew()
         {
             InitializeComponent();
@@ -68,27 +69,11 @@ namespace TDL
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Dashboard d = new Dashboard();
-            d.Show();
+            buttons.SwitchTo(this, sender);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Update u = new Update();
-            u.Show(); 
-            u.Selectt();
-        }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Delete d = new Delete();
-            this.Hide();
-            d.Show();
-        }
- 
     }
 }
