@@ -39,7 +39,7 @@ namespace TDL
         //Creat event that must be raised
         private void ShowMessageEvent(object source, EventArgs args)
         {
-            MessageBox.Show("THIS IS 1.0 VERSION OF TO DO LIST APPLICATION USING C# PROGRAMMING LANGUAGE");
+            MessageBox.Show("This is a TODOLIST application developed by: Egzona Vjosa Donjeta!");
         } 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -132,11 +132,8 @@ namespace TDL
             //calling struct
             lo.logoutt = "System is closing...";
             MessageBox.Show(lo.logoutt);
-            this.Hide();
+            Application.Exit();
         }
-
-        
-
-        
+                
     }
 }
