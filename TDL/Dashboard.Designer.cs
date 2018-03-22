@@ -40,6 +40,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -117,6 +118,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
@@ -179,6 +181,17 @@
             this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::TDL.Properties.Resources.logout;
+            this.button5.Location = new System.Drawing.Point(809, 11);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(5);
+            this.button5.Size = new System.Drawing.Size(31, 33);
+            this.button5.TabIndex = 2;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button4
             // 
             this.button4.BackgroundImage = global::TDL.Properties.Resources.icon;
@@ -220,5 +233,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

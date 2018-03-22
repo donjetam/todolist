@@ -13,13 +13,18 @@ using TDL.Resources;
 
 namespace TDL
 {
+    //declearing struct
+    struct logout {
+        public string logoutt;
+    }
     public partial class Dashboard : Form 
     {
+       //creating object of struct
+        logout lo = new logout();
         contactClass c = new contactClass();
         AddNotes ad = new AddNotes();
         VIew vv = new VIew();
-      
-
+         
         public Dashboard()
         {
             InitializeComponent();
@@ -121,6 +126,16 @@ namespace TDL
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //calling struct
+            lo.logoutt = "System is closing...";
+            MessageBox.Show(lo.logoutt);
+            this.Hide();
+        }
+
+        
 
         
     }

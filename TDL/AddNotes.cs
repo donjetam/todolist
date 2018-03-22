@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TDL
-{
+{ 
     class AddNotes:Interface_Add 
-    {
+    { 
+
         //Getter Setter Properties 
         //Acts as Data Carrier in Our Application
         public string Title { get; set; }
