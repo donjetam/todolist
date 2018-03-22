@@ -21,20 +21,22 @@ namespace TDL
 
         public void login(string user, string pass)
         {
-            Users users = Users.Egzona;
-            if(users == Users.Egzona){
-                MessageBox.Show("Egzona is logged in");
-            }
-            else if (users == Users.Donjeta)
-            {
-                MessageBox.Show("Donjeta is logged in");
-            }
-            else
-            {
-                MessageBox.Show("Vjosa is logged in");
-            }
             if (user == user1 && pass == pass1)
             {
+                Users users = Users.Donjeta;
+                if (users == Users.Egzona)
+                {
+                    MessageBox.Show("Egzona is logged in");
+                }
+                else if (users == Users.Donjeta)
+                {
+                    MessageBox.Show("Donjeta is logged in");
+                }
+                else
+                {
+                    MessageBox.Show("Vjosa is logged in");
+                }
+
                 Dashboard d = new Dashboard();
                 Form1 f1 = new Form1();
                 f1.Hide();
@@ -42,8 +44,10 @@ namespace TDL
             }
             else
             { 
-                MessageBox.Show("Login FAILED!");
-                
+                MessageBox.Show("Login FAILED! Wrong Credencial. Check again!");
+                Form1 f1 = new Form1();
+                f1.Show();
+
             }
         }
          
