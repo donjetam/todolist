@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TDL
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form,Interface
     {
         Credentials c = new Credentials();
          
@@ -30,5 +30,13 @@ namespace TDL
         {
 
         }
-    }
+  
+        public void login(string user, string pass)
+        {
+            user = tf_username.Text;
+            pass = tf_password.Text;
+
+            Console.WriteLine(user + pass);
+        }
+}
 }

@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace TDL
 {
-    class AbstractClass
+    public abstract class AbstractClass:Interface_Update
     {
+        public abstract void updateSuccess();
+
+        public abstract void updateFail();
+
+        public void getdata()
+        {
+            //geting data from database
+        }
     }
 }

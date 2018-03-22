@@ -39,7 +39,7 @@ namespace TDL.Resources
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex);
             }
             finally
             {
@@ -79,9 +79,9 @@ namespace TDL.Resources
                     isSuccess = false;
                 }
             }
-            catch (Exception ex)
+           catch (System.Data.SqlClient.SqlException sqlException)
             {
-
+                System.Windows.Forms.MessageBox.Show(sqlException.Message);
             }
             finally
             {
@@ -89,7 +89,7 @@ namespace TDL.Resources
             }
             return isSuccess;
         }
-        //Method to Delete Data from DAtabase
+        //Method to Delete Data from database
         public bool Delete(contactClass c)
         {
             //Create a default return value and set its value to false
@@ -98,7 +98,7 @@ namespace TDL.Resources
             SqlConnection conn = new SqlConnection(myconnstrng);
             try
             {
-                //SQL To Delte DAta
+                //SQL delete data
                 string sql = "DELETE FROM tblAdd WHERE ID=@ID";
 
                 //Creating SQL Command
@@ -119,28 +119,16 @@ namespace TDL.Resources
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex);
             }
             finally
             {
-                //Close Connection
                 conn.Close();
             }
             return isSuccess;
         }
-
-        //internal DataTable Selectt()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
-
-
-
-
-
-
 
 
 ////Inserting DAta into Database

@@ -13,6 +13,8 @@ namespace TDL
 {
     public partial class Delete : Form
     {
+
+        Notify n = new Notify();
         Dashboard d = new Dashboard();
         VIew v = new VIew();
         Update up = new Update();
@@ -63,19 +65,15 @@ namespace TDL
             bool success = c.Delete(c);
             if (success == true)
             {
-                //Successfully Deleted
-                MessageBox.Show("Notes successfully deleted.");
-                //Refresh Data GridView
-                //Load Data on Data GRidview
+                n.notifyS();
                 DataTable dt = c.Select();
                 dgvContactList.DataSource = dt;
-                //Call the Clear Method Here
                 Clear();
             }
             else
             {
                 //Failed to Delete
-                MessageBox.Show("Failed to Delete Dontact. Try Again.");
+                 n.notifyF();
             }
         }
         public void Clear() {

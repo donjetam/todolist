@@ -12,17 +12,19 @@ using TDL.Resources;
 
 namespace TDL
 {
-    public partial class Dashboard : Form
+    public partial class Dashboard : Form 
     {
-        public Dashboard()
-        {
-            InitializeComponent();
-            this.CenterToScreen();
-        } 
-        
         contactClass c = new contactClass();
         AddNotes ad = new AddNotes();
         VIew vv = new VIew();
+      
+
+        public Dashboard()
+        {
+            InitializeComponent();
+            this.CenterToScreen(); 
+        } 
+        
         
         private void btn_add_Click(object sender, EventArgs e)
         {
@@ -90,6 +92,17 @@ namespace TDL
             Delete d = new Delete();
             this.Hide();
             d.Show();
+        }
+
+
+        private void userShow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         } 
     }
 }
