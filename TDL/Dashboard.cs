@@ -5,8 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms; 
+using System.Windows.Forms;
 using TDL.Resources;
 
 
@@ -22,9 +23,25 @@ namespace TDL
         public Dashboard()
         {
             InitializeComponent();
-            this.CenterToScreen(); 
+            this.CenterToScreen();
+            ownEventHandler = new OwnEventHandler(); 
+            //Adding event to event handler
+            ownEventHandler.Event += ShowMessageEvent;
+        }
+
+        //Initialize event handling
+        private OwnEventHandler ownEventHandler;
+        //Creat event that must be raised
+        private void ShowMessageEvent(object source, EventArgs args)
+        {
+            MessageBox.Show("THIS IS 1.0 VERSION OF TO DO LIST APPLICATION USING C# PROGRAMMING LANGUAGE");
         } 
-        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Thread.Sleep(1000);
+
+            ownEventHandler.FireEvent();
+        } 
         
         private void btn_add_Click(object sender, EventArgs e)
         {
@@ -103,6 +120,8 @@ namespace TDL
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-        } 
+        }
+
+        
     }
 }
