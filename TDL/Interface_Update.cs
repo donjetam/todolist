@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TDL
 {
-    interface Interface_Delete
+    interface Interface_Update
     {
+         void getdata();
     }
 }

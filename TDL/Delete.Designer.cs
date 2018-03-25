@@ -1,4 +1,4 @@
-﻿namespace TDL
+namespace TDL
 {
     partial class Delete
     {
@@ -19,7 +19,6 @@
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -39,7 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvContactList = new System.Windows.Forms.DataGridView();
             this.btn_update = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_dashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_view = new System.Windows.Forms.Button();
@@ -163,7 +162,7 @@
             this.btn_update.UseVisualStyleBackColor = false;
             this.btn_update.Click += new System.EventHandler(this.button_Click);
             // 
-            // button4
+            // btn_dashboard
             // 
             this.button4.BackColor = System.Drawing.Color.DarkOrange;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,14 +180,14 @@
             this.panel2.Controls.Add(this.btn_delete);
             this.panel2.Controls.Add(this.btn_update);
             this.panel2.Controls.Add(this.btn_view);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.btn_dashboard);
             this.panel2.Controls.Add(this.btn_add);
             this.panel2.Location = new System.Drawing.Point(-8, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(822, 73);
             this.panel2.TabIndex = 33;
             // 
-            // btn_delete
+            // button3
             // 
             this.btn_delete.BackColor = System.Drawing.Color.Gray;
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -275,7 +274,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvContactList;
         private System.Windows.Forms.Button btn_update;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_dashboard;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_view;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -22,7 +22,7 @@ namespace TDL
         }
         Buttons buttons = new Buttons();
         contactClass c = new contactClass();
-
+        UpdateClass ud = new UpdateClass();
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
         //SElecting Data from Database
         public DataTable Selectt()
@@ -56,7 +56,7 @@ namespace TDL
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(this.Title.Text) || string.IsNullOrWhiteSpace(this.Label.Text) || string.IsNullOrWhiteSpace(this.Description.Text))
+              if (String.IsNullOrWhiteSpace(this.Title.Text) || string.IsNullOrWhiteSpace(this.Label.Text) || string.IsNullOrWhiteSpace(this.Description.Text))
             {
                 MessageBox.Show("Please fill up the form!");
             }
@@ -71,18 +71,19 @@ namespace TDL
             if (success == true)
             {
                 //Updated Successfully
-                MessageBox.Show("Contact has been successfully Updated.");
+               // MessageBox.Show("Note has been successfully Updated.");
                 //Load Data on Data Gridview
               //  DataTable dt = c.Selectt();
                // dgvContactList.DataSource = dt;
                 //Call Clear Method
+                ud.updateSuccess();
                 Selectt();
                 Clear();
             }
             else
             {
                 //Failed to Update
-                MessageBox.Show("Failed to Update Contact.Try Again.");
+                ud.updateFail();
             }
             }
         }
@@ -111,5 +112,5 @@ namespace TDL
         {
             buttons.SwitchTo(this, sender);
         }
-    }
+  }
 }

@@ -9,9 +9,8 @@ namespace TDL
 {
     class Credentials:Interface
     {
-        string user1 = "user";
-        string pass1 = "123";
-
+        Dashboard d = new Dashboard();
+        
         enum Users
         {
             Egzona,
@@ -21,33 +20,34 @@ namespace TDL
 
         public void login(string user, string pass)
         {
-            if (user == user1 && pass == pass1)
-            {
-                Users users = Users.Donjeta;
-                if (users == Users.Egzona)
-                {
-                    MessageBox.Show("Egzona is logged in");
-                }
-                else if (users == Users.Donjeta)
-                {
-                    MessageBox.Show("Donjeta is logged in");
-                }
-                else
-                {
-                    MessageBox.Show("Vjosa is logged in");
-                }
-
-                Dashboard d = new Dashboard();
-                Form1 f1 = new Form1();
-                f1.Hide();
+            string user1 = "xona";
+            string pass1 = "123";
+            string user2 = "donjeta";
+            string user3 = "vjosa";
+            
+            if(user1 == user && pass1 == pass){
+                Users users = Users.Egzona;
+                MessageBox.Show(users + " is logged in");
                 d.Show();
             }
-            else
-            { 
-                MessageBox.Show("Login FAILED! Wrong Credencial. Check again!");
+            else if (user2 == user && pass1 == pass)
+            {
+                Users users = Users.Donjeta;
+                MessageBox.Show(users + " is logged in");
+                d.Show();
+
+            }
+            else if (user3 == user && pass1 == pass)
+            {
+                Users users = Users.Vjosa;
+                MessageBox.Show(users + " is logged in");
+                d.Show();
+
+            }
+            else{
+                MessageBox.Show("Wrong Username/password");
                 Form1 f1 = new Form1();
                 f1.Show();
-
             }
         }
          

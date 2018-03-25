@@ -1,30 +1,57 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms; 
+using System.Windows.Forms;
 using TDL.Resources;
+
 
 
 namespace TDL
 {
+    //declearing struct
+    struct logout
+    {
+        public string logoutt;
+    }
     public partial class Dashboard : Form, Switcher
     {
-        public Dashboard()
-        {
-            InitializeComponent();
-            this.CenterToScreen();
-        } 
-        
+        //creating object of struct
+        logout lo = new logout();
         contactClass c = new contactClass();
         AddNotes ad = new AddNotes();
         VIew vv = new VIew();
         Buttons buttons = new Buttons();
-        
+
+        public Dashboard()
+        {
+            InitializeComponent();
+            this.CenterToScreen();
+            ownEventHandler = new OwnEventHandler();
+            //Adding event to event handler
+            ownEventHandler.Event += ShowMessageEvent;
+        }
+
+        //Initialize event handling
+        private OwnEventHandler ownEventHandler;
+        //Creat event that must be raised
+        private void ShowMessageEvent(object source, EventArgs args)
+        {
+            MessageBox.Show("This is a TODOLIST application developed by: Egzona Vjosa Donjeta!");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Thread.Sleep(1000);
+
+            ownEventHandler.FireEvent();
+        }
+
         private void btn_add_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(this.Title.Text) || string.IsNullOrWhiteSpace(this.Label.Text) || string.IsNullOrWhiteSpace(this.Description.Text))
@@ -73,5 +100,13 @@ namespace TDL
         {
 
         }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //calling struct
+            lo.logoutt = "System is closing...";
+            MessageBox.Show(lo.logoutt);
+            Application.Exit();
+        }
+
     }
 }
