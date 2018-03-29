@@ -20,27 +20,21 @@ namespace TDL
 
         public void login(string user, string pass)
         {
-            string user1 = "xona";
-            string pass1 = "123";
-            string user2 = "donjeta";
-            string user3 = "vjosa";
-            
-            if(user1 == user && pass1 == pass){
-                Users users = Users.Egzona;
-                MessageBox.Show(users + " is logged in");
-                d.Show();
-            }
-            else if (user2 == user && pass1 == pass)
-            {
-                Users users = Users.Donjeta;
-                MessageBox.Show(users + " is logged in");
-                d.Show();
+            string password = "123";
 
-            }
-            else if (user3 == user && pass1 == pass)
+            if (user == Users.Egzona.ToString() && pass == password)
             {
-                Users users = Users.Vjosa;
-                MessageBox.Show(users + " is logged in");
+                MessageBox.Show(Users.Egzona + " is logged in");
+                d.Show();
+            }
+            else if (user == Users.Donjeta.ToString() && pass == password)
+            {
+                MessageBox.Show(Users.Donjeta + " is logged in");
+                d.Show();
+            }
+            else if (user == Users.Vjosa.ToString() && pass == password)
+            {
+                MessageBox.Show(Users.Vjosa + " is logged in");
                 d.Show();
 
             }

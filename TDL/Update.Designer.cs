@@ -1,5 +1,4 @@
-
-namespace TDL
+﻿namespace TDL
 {
     partial class Update
     {
@@ -32,7 +31,7 @@ namespace TDL
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.update_button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.dgvContactList = new System.Windows.Forms.DataGridView();
@@ -54,7 +53,7 @@ namespace TDL
             // 
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.update_button);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.btn_add);
             this.panel2.Location = new System.Drawing.Point(2, -8);
@@ -68,12 +67,12 @@ namespace TDL
             this.button3.Font = new System.Drawing.Font("Proxima Nova Th", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Location = new System.Drawing.Point(585, 24);
-            this.button3.Name = "btn_delete";
+            this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 34);
             this.button3.TabIndex = 0;
             this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button_Click);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -81,25 +80,25 @@ namespace TDL
             this.button2.Font = new System.Drawing.Font("Proxima Nova Th", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(468, 24);
-            this.button2.Name = "btn_update";
+            this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 34);
             this.button2.TabIndex = 0;
             this.button2.Text = "UPDATE";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // update_button
+            // button1
             // 
-            this.update_button.BackColor = System.Drawing.Color.DarkOrange;
-            this.update_button.Font = new System.Drawing.Font("Proxima Nova Th", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.update_button.Location = new System.Drawing.Point(374, 24);
-            this.update_button.Name = "btn_view";
-            this.update_button.Size = new System.Drawing.Size(79, 34);
-            this.update_button.TabIndex = 0;
-            this.update_button.Text = "VIEW";
-            this.update_button.UseVisualStyleBackColor = false;
-            this.update_button.Click += new System.EventHandler(this.button_Click);
+            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.Font = new System.Drawing.Font("Proxima Nova Th", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(374, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(79, 34);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "VIEW";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -107,12 +106,12 @@ namespace TDL
             this.button4.Font = new System.Drawing.Font("Proxima Nova Th", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Location = new System.Drawing.Point(31, 16);
-            this.button4.Name = "btn_dashboard";
+            this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(146, 59);
             this.button4.TabIndex = 0;
             this.button4.Text = "DASHBOARD";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button_Click);
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btn_add
             // 
@@ -125,7 +124,7 @@ namespace TDL
             this.btn_add.TabIndex = 0;
             this.btn_add.Text = "ADD";
             this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.button_Click);
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // dgvContactList
             // 
@@ -267,7 +266,7 @@ namespace TDL
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button update_button;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.DataGridView dgvContactList;

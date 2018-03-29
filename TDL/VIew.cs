@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -14,18 +14,18 @@ namespace TDL
 {
     public partial class VIew : Form, Switcher
     {
-        Buttons buttons = new Buttons();
         public VIew()
         {
             InitializeComponent();
             this.CenterToScreen();
            
         }
+        Buttons buttons = new Buttons();
         static string myconnstrng = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
         //SElecting Data from Database
         public DataTable Select()
         {
-               ///Step 1: Database Connection
+            ///Step 1: Database Connection
             SqlConnection conn = new SqlConnection(myconnstrng);
             DataTable dt = new DataTable();
             try
@@ -54,7 +54,7 @@ namespace TDL
         static string myconnstr = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
         private void txtboxSearch_TextChanged(object sender, EventArgs e)
         {
-           //Get teh value from text box
+            //Get teh value from text box
             string keyword = txtboxSearch.Text;
 
             SqlConnection conn = new SqlConnection(myconnstr);
@@ -69,11 +69,25 @@ namespace TDL
 
         }
 
-        private void button_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard d = new Dashboard();
+            d.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Update u = new Update();
+            u.Show(); 
+            u.Selectt();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             buttons.SwitchTo(this, sender);
         }
-
-
+ 
     }
 }

@@ -1,4 +1,4 @@
-namespace TDL
+﻿namespace TDL
 {
     partial class Delete
     {
@@ -19,6 +19,7 @@ namespace TDL
             }
             base.Dispose(disposing);
         }
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -37,11 +38,11 @@ namespace TDL
             this.IDlabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvContactList = new System.Windows.Forms.DataGridView();
-            this.btn_update = new System.Windows.Forms.Button();
-            this.btn_dashboard = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_view = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactList)).BeginInit();
@@ -149,38 +150,38 @@ namespace TDL
             this.dgvContactList.TabIndex = 32;
             this.dgvContactList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContactList_CellContentClick);
             // 
-            // btn_update
+            // button2
             // 
-            this.btn_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_update.Location = new System.Drawing.Point(437, 11);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(102, 34);
-            this.btn_update.TabIndex = 0;
-            this.btn_update.Text = "UPDATE";
-            this.btn_update.UseVisualStyleBackColor = false;
-            this.btn_update.Click += new System.EventHandler(this.button_Click);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(437, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 34);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "UPDATE";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btn_dashboard
+            // button4
             // 
             this.button4.BackColor = System.Drawing.Color.DarkOrange;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Location = new System.Drawing.Point(23, 3);
-            this.button4.Name = "btn_dashboard";
+            this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(146, 59);
             this.button4.TabIndex = 0;
             this.button4.Text = "DASHBOARD";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button_Click);
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btn_delete);
-            this.panel2.Controls.Add(this.btn_update);
-            this.panel2.Controls.Add(this.btn_view);
-            this.panel2.Controls.Add(this.btn_dashboard);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.btn_add);
             this.panel2.Location = new System.Drawing.Point(-8, 1);
             this.panel2.Name = "panel2";
@@ -189,29 +190,29 @@ namespace TDL
             // 
             // button3
             // 
-            this.btn_delete.BackColor = System.Drawing.Color.Gray;
-            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_delete.Location = new System.Drawing.Point(554, 11);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(79, 34);
-            this.btn_delete.TabIndex = 0;
-            this.btn_delete.Text = "DELETE";
-            this.btn_delete.UseVisualStyleBackColor = false;
-            this.btn_delete.Click += new System.EventHandler(this.button_Click);
+            this.button3.BackColor = System.Drawing.Color.Gray;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(554, 11);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(79, 34);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "DELETE";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btn_view
+            // button1
             // 
-            this.btn_view.BackColor = System.Drawing.Color.DarkOrange;
-            this.btn_view.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_view.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_view.Location = new System.Drawing.Point(343, 11);
-            this.btn_view.Name = "btn_view";
-            this.btn_view.Size = new System.Drawing.Size(79, 34);
-            this.btn_view.TabIndex = 0;
-            this.btn_view.Text = "VIEW";
-            this.btn_view.UseVisualStyleBackColor = false;
-            this.btn_view.Click += new System.EventHandler(this.button_Click);
+            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(343, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(79, 34);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "VIEW";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_add
             // 
@@ -224,7 +225,7 @@ namespace TDL
             this.btn_add.TabIndex = 0;
             this.btn_add.Text = "ADD";
             this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.button_Click);
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // panel1
             // 
@@ -273,11 +274,11 @@ namespace TDL
         private System.Windows.Forms.Label IDlabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvContactList;
-        private System.Windows.Forms.Button btn_update;
-        private System.Windows.Forms.Button btn_dashboard;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Button btn_view;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Panel panel1;
     }

@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TDL
 {
     class Buttons
     {
-
         public void SwitchTo(Switcher from, object sender)
         {
             var btn = (Button)sender;
@@ -16,7 +19,7 @@ namespace TDL
                     break;
                 case "btn_view":
                     VIew v = new VIew();
-                    this.ChangeView(from,v);
+                    this.ChangeView(from, v);
                     v.Select();
                     break;
                 case "btn_update":
@@ -33,7 +36,7 @@ namespace TDL
                     this.ChangeView(from, new Dashboard());
                     break;
             }
-           
+
         }
 
         void ChangeView(Switcher from, Switcher to)

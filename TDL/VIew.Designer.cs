@@ -1,4 +1,4 @@
-namespace TDL
+﻿namespace TDL
 {
     partial class VIew
     {
@@ -90,12 +90,12 @@ namespace TDL
             this.button3.Font = new System.Drawing.Font("Proxima Nova Th", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Location = new System.Drawing.Point(554, 11);
-            this.button3.Name = "btn_delete";
+            this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 34);
             this.button3.TabIndex = 0;
             this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button_Click);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -103,12 +103,12 @@ namespace TDL
             this.button2.Font = new System.Drawing.Font("Proxima Nova Th", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(437, 11);
-            this.button2.Name = "btn_update";
+            this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 34);
             this.button2.TabIndex = 0;
             this.button2.Text = "UPDATE";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -116,12 +116,11 @@ namespace TDL
             this.button1.Font = new System.Drawing.Font("Proxima Nova Th", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(343, 11);
-            this.button1.Name = "btn_view";
+            this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 34);
             this.button1.TabIndex = 0;
             this.button1.Text = "VIEW";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button_Click);
             // 
             // button4
             // 
@@ -129,12 +128,12 @@ namespace TDL
             this.button4.Font = new System.Drawing.Font("Proxima Nova Th", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Location = new System.Drawing.Point(27, 3);
-            this.button4.Name = "btn_dashboard";
+            this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(146, 59);
             this.button4.TabIndex = 0;
             this.button4.Text = "DASHBOARD";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button_Click);
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btn_add
             // 
@@ -147,7 +146,6 @@ namespace TDL
             this.btn_add.TabIndex = 0;
             this.btn_add.Text = "ADD";
             this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.button_Click);
             // 
             // panel1
             // 

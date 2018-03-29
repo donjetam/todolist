@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -13,13 +13,14 @@ using TDL.Resources;
 
 namespace TDL
 {
-    public partial class Update : Form, Switcher
+    public partial class Update : Form,Switcher
     {
         public Update()
         {
             InitializeComponent();
             this.CenterToScreen();
         }
+
         Buttons buttons = new Buttons();
         contactClass c = new contactClass();
         UpdateClass ud = new UpdateClass();
@@ -54,9 +55,17 @@ namespace TDL
         }
          
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            buttons.SwitchTo(this, sender);
+            /*this.Hide();
+            Dashboard d = new Dashboard();
+            d.Show();*/
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
-              if (String.IsNullOrWhiteSpace(this.Title.Text) || string.IsNullOrWhiteSpace(this.Label.Text) || string.IsNullOrWhiteSpace(this.Description.Text))
+            if (String.IsNullOrWhiteSpace(this.Title.Text) || string.IsNullOrWhiteSpace(this.Label.Text) || string.IsNullOrWhiteSpace(this.Description.Text))
             {
                 MessageBox.Show("Please fill up the form!");
             }
@@ -87,14 +96,22 @@ namespace TDL
             }
             }
         }
-
-
-        public void Clear()
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
+            
+        }
+
+         
+        public void Clear() {
             ID.Text = "";
             Title.Text = String.Empty;
             Description.Text = String.Empty;
             Label.Text = String.Empty;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void dgvContactList_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -108,9 +125,29 @@ namespace TDL
             Label.Text = dgvContactList.Rows[rowIndex].Cells[3].Value.ToString(); 
         }
 
-        private void button_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            VIew v = new VIew();
+            v.Show();
+            v.Select();
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        { 
+            //this.Hide();
+            //Dashboard d = new Dashboard();
+            //d.Show();
+            buttons.SwitchTo(this, sender);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           // Delete d = new Delete();
+            //this.Hide();
+           // d.Show();
             buttons.SwitchTo(this, sender);
         }
-  }
+    }
 }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,22 +13,18 @@ namespace TDL
 {
     public partial class Delete : Form, Switcher
     {
+
         Notify n = new Notify();
         Dashboard d = new Dashboard();
         VIew v = new VIew();
         Update up = new Update();
         contactClass c = new contactClass();
         Buttons buttons = new Buttons();
-
         public Delete()
         {
             InitializeComponent();
             this.CenterToScreen();
             Load_Notes();
-            foreach (var button in Controls.OfType<Button>())
-            {
-                button.Click += button_Click;
-            }
         }
 
         private void Delete_Load(object sender, EventArgs e)
@@ -36,11 +32,30 @@ namespace TDL
 
         }
 
-        private void button_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            buttons.SwitchTo(this, sender);
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
         {
             buttons.SwitchTo(this, sender);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            v.Show();
+            up.Select();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            up.Show();
+            up.Selectt();
+        }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -57,7 +72,7 @@ namespace TDL
             else
             {
                 //Failed to Delete
-                n.notifyF();
+                 n.notifyF();
             }
         }
         public void Clear() {
@@ -74,13 +89,18 @@ namespace TDL
             ID.Text = dgvContactList.Rows[rowIndex].Cells[0].Value.ToString();
             Title.Text = dgvContactList.Rows[rowIndex].Cells[1].Value.ToString();
             Description.Text = dgvContactList.Rows[rowIndex].Cells[2].Value.ToString();
-            Label.Text = dgvContactList.Rows[rowIndex].Cells[3].Value.ToString();
+            Label.Text = dgvContactList.Rows[rowIndex].Cells[3].Value.ToString(); 
         }
         private void Load_Notes()
         {
             //Load Data on Data Gridview
             DataTable dt = c.Select();
             dgvContactList.DataSource = dt;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

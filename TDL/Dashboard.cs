@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,28 +11,26 @@ using System.Windows.Forms;
 using TDL.Resources;
 
 
-
 namespace TDL
 {
     //declearing struct
-    struct logout
-    {
+    struct logout {
         public string logoutt;
     }
     public partial class Dashboard : Form, Switcher
     {
-        //creating object of struct
+       //creating object of struct
         logout lo = new logout();
         contactClass c = new contactClass();
         AddNotes ad = new AddNotes();
         VIew vv = new VIew();
         Buttons buttons = new Buttons();
-
+         
         public Dashboard()
         {
             InitializeComponent();
             this.CenterToScreen();
-            ownEventHandler = new OwnEventHandler();
+            ownEventHandler = new OwnEventHandler(); 
             //Adding event to event handler
             ownEventHandler.Event += ShowMessageEvent;
         }
@@ -43,15 +41,14 @@ namespace TDL
         private void ShowMessageEvent(object source, EventArgs args)
         {
             MessageBox.Show("This is a TODOLIST application developed by: Egzona Vjosa Donjeta!");
-        }
-
+        } 
         private void button4_Click(object sender, EventArgs e)
         {
             Thread.Sleep(1000);
 
             ownEventHandler.FireEvent();
-        }
-
+        } 
+        
         private void btn_add_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(this.Title.Text) || string.IsNullOrWhiteSpace(this.Label.Text) || string.IsNullOrWhiteSpace(this.Description.Text))
@@ -91,15 +88,44 @@ namespace TDL
             Label  .Text = String.Empty; 
         }
 
-        public void button_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            buttons.SwitchTo(this, sender);
+           
+            this.Hide();
+            vv.Show();
+            vv.Select();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Update d = new Update();
+            d.Show(); 
+            d.Selectt();
         }
 
         private void Description_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            buttons.SwitchTo(this, sender);
+        }
+
+
+        private void userShow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             //calling struct
@@ -107,6 +133,6 @@ namespace TDL
             MessageBox.Show(lo.logoutt);
             Application.Exit();
         }
-
+                
     }
 }

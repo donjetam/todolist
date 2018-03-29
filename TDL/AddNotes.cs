@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TDL.Resources;
 
 namespace TDL
-{
+{ 
     class AddNotes:Interface_Add 
-    {
+    { 
+
         //Getter Setter Properties 
         //Acts as Data Carrier in Our Application
         public string Title { get; set; }
@@ -39,7 +41,7 @@ namespace TDL
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex);
             }
             finally
             {
@@ -48,7 +50,7 @@ namespace TDL
             return dt;
         }
         
-        //Inserting DAta into Database
+        //Inserting data in database
         internal bool Insert(Resources.contactClass c)
         {  
             //Creating a default return type and setting its value to false
@@ -90,16 +92,17 @@ namespace TDL
             }
             return isSuccess;
         }
-
-
+        
         public void notification_success()
         {
-            MessageBox.Show("NOTES ADDED SUCCESFULLY");
+            MessageBox.Show("New note added successfully.");
         }
 
         public void notification_failed()
         {
-            MessageBox.Show("FAILED TO SAVE NOTES");
+            MessageBox.Show("Failed to add new notes. Please try again!");
+
+            throw new ExceptionFail("Failed to add data in database.");
         }
          
     }
